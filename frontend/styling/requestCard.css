@@ -1,0 +1,28 @@
+h2 {
+  margin-left: 90px;
+}
+
+.request-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 5px 20px 20px 90px;
+}
+
+.request-card {
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.request-card p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.request-card span {
+  font-weight: bold;
+}

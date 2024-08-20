@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory</title>
+    <link rel="stylesheet" href="../styling/navBar.css" />
+    <link rel="stylesheet" href="../styling/bookCard.css" />
+    <link rel="stylesheet" href="../styling/addBook.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="title">Book Management</div>
+      <div class="nav-links">
+        <a href="./bookshelf.html">Bookshelf</a>
+        <a href="./inventory.html">Inventory</a>
+        <a href="./requests.html">Requests</a>
+        <button class="logout-button" onclick="handleLogout()">Logout</button>
+      </div>
+    </div>
+    <div class="main-head">
+      <h2>Inventory</h2>
+      <button class="addNew">Add a Book</button>
+    </div>
+    <main class="root-container"></main>
+    <div class="add-container active">
+      <div class="form-container">
+        <h2>Add Book</h2>
+        <form id="myform">
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            name="title"
+            placeholder="Title of the Book"
+          /><br />
+          <label for="author">Author:</label>
+          <input
+            type="text"
+            name="author"
+            placeholder="Author of the book"
+          /><br />
+          <label for="genre">Genre:</label>
+          <input type="text" name="genre" placeholder="Genre" /><br />
+          <label for="publication_year">Publication Year:</label>
+          <input
+            type="number"
+            name="publication_year"
+            placeholder="YYYY"
+          /><br />
+          <button id="add-btn">Add</button>
+        </form>
+      </div>
+    </div>
+    <script src="../javascript/inventory.js"></script>
+    <script>
+      function deleteCookie(name) {
+        document.cookie = name + "=; Max-Age=-99999999; path=/;";
+      }
+      function handleLogout() {
+        deleteCookie("token");
+        window.location.href = "../index.html";
+      }
+    </script>
+  </body>
+</html>

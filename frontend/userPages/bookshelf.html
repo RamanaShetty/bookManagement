@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookShelf</title>
+    <link rel="stylesheet" href="../styling/navBar.css" />
+    <link rel="stylesheet" href="../styling/bookCard.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="title">Book Management</div>
+      <div class="nav-links">
+        <a href="./bookshelf.html">Bookshelf</a>
+        <a href="./inventory.html">Inventory</a>
+        <a href="./requests.html">Requests</a>
+        <button class="logout-button" onclick="handleLogout()">Logout</button>
+      </div>
+    </div>
+    <h2>BookShelf</h2>
+    <main class="root-container"></main>
+    <script src="../javascript/bookshelf.js"></script>
+    <script>
+      function deleteCookie(name) {
+        document.cookie = name + "=; Max-Age=-99999999; path=/;";
+      }
+      function handleLogout() {
+        deleteCookie("token");
+        window.location.href = "../index.html";
+      }
+    </script>
+  </body>
+</html>

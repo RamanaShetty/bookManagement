@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+main {
+  padding: 10px 20px 20px 20px;
+  margin: 10px 20px 0px 20px;
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+main th,
+main td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+main th {
+  background-color: #f2f2f2;
+}
+
+main tr:hover {
+  background-color: #f5f5f5;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: bold;
+}
+
+.additional-tables {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.additional-tables > div {
+  width: 40%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.additional-tables table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.additional-tables th,
+.additional-tables td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+.additional-tables th {
+  background-color: #f2f2f2;
+}
+
+.additional-tables tr:hover {
+  background-color: #f5f5f5;
+}

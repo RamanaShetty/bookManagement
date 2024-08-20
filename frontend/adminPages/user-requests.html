@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users & Requests</title>
+    <link rel="stylesheet" href="../styling/navBar.css" />
+    <link rel="stylesheet" href="../styling/users_request.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="title">Book Management</div>
+      <div class="nav-links">
+        <a href="./admin.html">Audit Trail</a>
+        <a href="./user-requests.html">Users & Requests</a>
+        <button class="logout-button" onclick="handleLogout()">Logout</button>
+      </div>
+    </div>
+
+    <main>
+      <!-- Users Table -->
+      <div class="table-container">
+        <h2>Users</h2>
+        <table id="users-table">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Username</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="pagination" id="users-pagination">
+          <button id="prev-users" onclick="prevPage('users')">Previous</button>
+          <span id="users-page-info"></span>
+          <button id="next-users" onclick="nextPage('users')">Next</button>
+        </div>
+      </div>
+
+      <!-- Requests Table -->
+      <div class="table-container">
+        <h2>Book Requests</h2>
+        <table id="requests-table">
+          <thead>
+            <tr>
+              <th>Request ID</th>
+              <th>Book Title</th>
+              <th>Requested By</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="pagination" id="requests-pagination">
+          <button id="prev-requests" onclick="prevPage('requests')">
+            Previous
+          </button>
+          <span id="requests-page-info"></span>
+          <button id="next-requests" onclick="nextPage('requests')">
+            Next
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="../javascript/user-request.js"></script>
+  </body>
+</html>

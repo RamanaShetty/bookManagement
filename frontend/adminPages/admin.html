@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="../styling/navBar.css" />
+    <link rel="stylesheet" href="../styling/audit.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="title">Book Management</div>
+      <div class="nav-links">
+        <a href="./admin.html">Audit Trail</a>
+        <a href="./user-requests.html">Users & Requests</a>
+        <button class="logout-button" onclick="handleLogout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <main>
+        <h2>Overview</h2>
+        <table id="audit-table">
+          <thead>
+            <tr>
+              <th>Book ID</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Genre</th>
+              <th>Publication Year</th>
+              <th>Added By</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="pagination">
+          <button id="main-prev" onclick="prevPage('main')">Previous</button>
+          <span id="main-page-info"></span>
+          <button id="main-next" onclick="nextPage('main')">Next</button>
+        </div>
+      </main>
+
+      <div class="additional-tables">
+        <div>
+          <h2>User Book Count</h2>
+          <table id="user-books-table">
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Book Count</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div class="pagination">
+            <button id="userBooks-prev" onclick="prevPage('userBooks')">
+              Previous
+            </button>
+            <span id="userBooks-page-info"></span>
+            <button id="userBooks-next" onclick="nextPage('userBooks')">
+              Next
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <h2>Genre Book Count</h2>
+          <table id="genre-books-table">
+            <thead>
+              <tr>
+                <th>Serial No.</th>
+                <th>Genre</th>
+                <th>Book Count</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div class="pagination">
+            <button id="genreBooks-prev" onclick="prevPage('genreBooks')">
+              Previous
+            </button>
+            <span id="genreBooks-page-info"></span>
+            <button id="genreBooks-next" onclick="nextPage('genreBooks')">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../javascript/audit.js"></script>
+  </body>
+</html>

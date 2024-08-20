@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="./styling/index.css" />
+  </head>
+  <body>
+    <div id="auth-container">
+      <div id="login-form" class="form-container">
+        <h2>Login</h2>
+        <form id="login" onsubmit="handleLogin(event)">
+          <label for="login-username">Username:</label>
+          <input
+            type="text"
+            id="login-username"
+            name="username"
+            autocomplete="off"
+            required
+          />
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" name="password" required />
+          <button type="submit">Login</button>
+          <p>
+            Don't have an account?
+            <a href="#" onclick="showRegister()">Register here</a>
+          </p>
+        </form>
+      </div>
+      <div id="register-form" class="form-container" style="display: none">
+        <h2>Register</h2>
+        <form id="register" onsubmit="handleRegister(event)">
+          <label for="register-username">Username:</label>
+          <input
+            type="text"
+            id="register-username"
+            name="username"
+            autocomplete="off"
+            required
+          />
+          <label for="register-password">Password:</label>
+          <input
+            type="password"
+            id="register-password"
+            name="password"
+            required
+          />
+          <label for="register-confirm-password">Confirm Password:</label>
+          <input
+            type="password"
+            id="register-confirm-password"
+            name="confirm-password"
+            required
+          />
+          <div class="checkbox-container">
+            <input type="checkbox" id="is-admin" name="is-admin" />
+            <label for="is-admin">Register as Admin</label>
+          </div>
+          <button type="submit">Register</button>
+          <p>
+            Already have an account?
+            <a href="#" onclick="showLogin()">Login here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>
